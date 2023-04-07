@@ -1,0 +1,521 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alert looklive</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/delft.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.photocollage.min.js"></script>
+<script src="wwb18.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      var elementCarousel1 = document.querySelector('#Carousel1');
+      elementCarousel1.addEventListener('slid.bs.carousel', function(e)
+      {
+         switch(e.to)
+         {
+            case 0:
+               AnimateCss('wb_welcomeText5', 'transform-rotate-in', 300, 1000);
+               AnimateCss('welcomeButton3', 'vanish-in', 2000, 1000);
+               break;
+         }
+      });
+      var Carousel1 = new bootstrap.Carousel('#Carousel1', {interval: 6000, pause: false});
+      var ThemeableMenu1_dropdownToggle = document.querySelectorAll('#ThemeableMenu1 .dropdown-toggle');
+      ThemeableMenu1_dropdownToggle.forEach(item => 
+      {
+         var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
+      });
+      var ThemeableMenu1_dropdown = document.querySelectorAll('#ThemeableMenu1 .dropdown');
+      ThemeableMenu1_dropdown.forEach(item => 
+      {
+         item.addEventListener('shown.bs.dropdown', function(e)
+         {
+            e.currentTarget.classList.add('show');
+         });
+         item.addEventListener('hidden.bs.dropdown', function(e)
+         {
+            e.currentTarget.classList.remove('show');
+         });
+      });
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#todoCards']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_todoCards').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#planTripLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#planTripLayoutGrid').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#galleryLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollgalleryLayoutGrid()
+      {
+         var $obj = $("#wb_galleryLayoutGrid");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollgalleryLayoutGrid();
+      $(window).scroll(function(event)
+      {
+         onScrollgalleryLayoutGrid();
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("#galleryCollage").photocollage({ effect: 'css', duration: 600, padding: 20, lazyload: true, matrix: '1,1,1,2,0,1,2,0,0,0,1,0,0,1,1,2,0,1,2,0,0,0,1,0,0' });
+      $("a[href*='#LayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top }, 600, 'easeInSine');
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_FontAwesomeIcon1">
+                  <a href="./admin.html"><div id="FontAwesomeIcon1"><i class="fa fa-phone"></i></div></a>
+               </div>
+               <label for="" id="Label1">+919037848878</label>
+            </div>
+            <div class="col-2">
+               <div id="wb_FontAwesomeIcon2">
+                  <a href="./admin.html"><div id="FontAwesomeIcon2"><i class="fa fa-envelope-o"></i></div></a>
+               </div>
+               <label for="" id="Label2">info@alertlooklive.in</label>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-4">
+               <div id="wb_location-icon2">
+                  <a href="./index.html"><div id="location-icon2"><i class="fa fa-twitter"></i></div></a>
+               </div>
+               <div id="wb_location-icon1">
+                  <a href="./index.html"><div id="location-icon1"><i class="fa fa-facebook"></i></div></a>
+               </div>
+               <div id="wb_location-icon4">
+                  <a href="./index.html"><div id="location-icon4"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_location-icon5">
+                  <a href="./index.html"><div id="location-icon5"><i class="fa fa-youtube"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Image1">
+                  <img src="images/logo_alert_ed-removebg-preview.png" id="Image1" alt="" width="242" height="122">
+               </div>
+            </div>
+            <div class="col-2">
+            </div>
+            <div class="col-3">
+               <nav id="wb_ThemeableMenu1">
+                  <div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <a id="ThemeableMenu1-logo" href="#"><img alt="" title="" src="images/logo32.jpg"></a>
+                        <div class="navbar-header">
+                           <button title="" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".ThemeableMenu1-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="ThemeableMenu1-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="nav-item">
+                                 <a href="#welcome" class="nav-link">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#planTripHeading" class="nav-link">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#wb_LayoutGrid2" class="nav-link">Services</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#wb_contact" class="nav-link">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Carousel1">
+                  <div id="Carousel1" class="carousel slide" data-bs-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="carousel-item-inner">
+                              <div id="wb_welcomeText5">
+                                 <p style="font-size:21px;line-height:24.5px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Welcome to Alert</span></p>
+                              </div>
+                              <div id="wb_welcomeText6">
+                                 <p>Security solutions for your work and home</p>
+                              </div>
+                              <a id="welcomeButton3" href="+919037848878">Call us for a demo</a>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-item-start carousel-control" href="#Carousel1" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-item-end carousel-control" href="#Carousel1" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid2">
+      <div id="LayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading1">
+                  <h2 id="Heading1"><a href="#services">What we do</a></h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_todoCards">
+      <div id="todoCards">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_todoCard1" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard1-card-body">
+                        <div style="overflow:hidden"><img id="todoCard1-card-item0" src="images/security-camera icon.png" width="512" height="512" alt="" title=""></div>
+                        <div id="todoCard1-card-item1">CCTV </div>
+                        <div id="todoCard1-card-item2">Installation and maintanance of all kind of CCTV products like IP cameras and Analog cameras</div>
+                        <div id="todoCard1-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_todoCard2" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard2-card-body">
+                        <img id="todoCard2-card-item0" src="images/lock and sheild red.png" width="224" height="225" alt="" title="">
+                        <div id="todoCard2-card-item1">Security Products</div>
+                        <div id="todoCard2-card-item2">Installation and maintenance of security products like PIR sensors, Biometrix access controllers,Smart door lock</div>
+                        <div id="todoCard2-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_todoCard3" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard3-card-body">
+                        <img id="todoCard3-card-item0" src="images/door phone icon.jpg" width="398" height="368" alt="" title="">
+                        <div id="todoCard3-card-item1">Video Door Phone</div>
+                        <div id="todoCard3-card-item2">Installation and maintenace of Video Door Phones Which sutiable for Home and Appartments</div>
+                        <div id="todoCard3-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_todoCard4" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard4-card-body">
+                        <img id="todoCard4-card-item0" src="images/networking.png" width="542" height="473" alt="" title="">
+                        <div id="todoCard4-card-item1">Networking</div>
+                        <div id="todoCard4-card-item2">Implimentation and Designing of advanced and complex networking solutions for your office and home</div>
+                        <div id="todoCard4-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_planTripHeading">
+                  <h2 id="planTripHeading">Why us?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTripLayoutGrid">
+      <div id="planTripLayoutGrid">
+         <div id="wb_planTripCard1" class="card">
+            <div id="planTripCard1-card-body">
+               <div id="planTripCard1-card-item0"><i class="fa fa-money"></i></div>
+               <div id="planTripCard1-card-item1">Exclusive pricing</div>
+               <div id="planTripCard1-card-item2">You can choose multi branded products from our product list with awesome deals!!</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard2" class="card">
+            <div id="planTripCard2-card-body">
+               <div id="planTripCard2-card-item0"><i class="fa fa-wrench"></i></div>
+               <div id="planTripCard2-card-item1">Support</div>
+               <div id="planTripCard2-card-item2">Hassel free after sales support with our experianced and dedicated service team   </div>
+            </div>
+         </div>
+         <div id="wb_planTripCard3" class="card">
+            <div id="planTripCard3-card-body">
+               <div id="planTripCard3-card-item0"><i class="fa fa-handshake-o"></i></div>
+               <div id="planTripCard3-card-item1">Fast implementation</div>
+               <div id="planTripCard3-card-item2">After project conformation, you dont need to wait so long our faster  implimentation team will give you a neat and clean installation.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_clientsLayoutGrid">
+      <div id="clientsLayoutGrid">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_clientsHeading">
+                     <h2 id="clientsHeading">Brands We Deal</h2>
+                  </div>
+                  <div id="wb_clientsImage1">
+                     <img src="images/2560px-Hikvision_logo.svg.png" id="clientsImage1" alt="" width="116" height="16">
+                  </div>
+                  <hr id="clientsLine1">
+                  <div id="wb_clientsImage2">
+                     <img src="images/CP_PLUS.jpg" id="clientsImage2" alt="" width="116" height="18">
+                  </div>
+                  <hr id="clientsLine2">
+                  <div id="wb_clientsImage3">
+                     <img src="images/Dahua_Technology_logo.svg.png" id="clientsImage3" alt="" width="106" height="33">
+                  </div>
+                  <hr id="clientsLine3">
+                  <div id="wb_clientsImage4">
+                     <img src="images/Prama-Logo_cropped.png" id="clientsImage4" alt="" width="106" height="28">
+                  </div>
+                  <hr id="clientsLine4">
+                  <div id="wb_clientsImage5">
+                     <img src="images/Trueview-Logo-1-1024x336.png" id="clientsImage5" alt="" width="106" height="35">
+                  </div>
+                  <hr id="Line1">
+                  <div id="wb_Image2">
+                     <img src="images/Godrej_Logo.svg.png" id="Image2" alt="" width="91" height="44">
+                  </div>
+                  <hr id="Line2">
+                  <div id="wb_Image3">
+                     <img src="images/hifocus_logo.png" id="Image3" alt="" width="99" height="26">
+                  </div>
+                  <hr id="Line3">
+                  <div id="wb_Image4">
+                     <img src="images/2560px-Honeywell_logo.svg.png" id="Image4" alt="" width="99" height="18">
+                  </div>
+                  <hr id="Line4">
+                  <div id="wb_Image5">
+                     <img src="images/SONOFF-logo.png" id="Image5" alt="" width="91" height="34">
+                  </div>
+                  <hr id="Line5">
+                  <div id="wb_Image6">
+                     <img src="images/essl logo.jpg" id="Image6" alt="" width="69" height="43">
+                  </div>
+                  <hr id="Line6">
+                  <div id="wb_Image7">
+                     <img src="images/2560px-Logo_Legrand_SA.svg.png" id="Image7" alt="" width="96" height="24">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_gallery">
+      <div id="gallery">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_galleryHeading">
+                  <h2 id="galleryHeading">Gallery</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_galleryLayoutGrid">
+      <div id="galleryLayoutGrid">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_galleryCollage">
+                     <div id="galleryCollage">
+                        <div class="thumbnails">
+                           <figure class="thumbnail">
+                              <a href="WhatsApp Image 2023-04-01 at 1.25.00 PM (1).jpeg"><img alt="" src="WhatsApp Image 2023-04-01 at 1.25.00 PM (1).jpeg" loading="lazy" class="image" title="WhatsApp Image 2023-04-01 at 1.25.00 PM (1)" width="273" height="364"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="WhatsApp Image 2023-04-01 at 1.25.00 PM.jpeg"><img alt="" src="WhatsApp Image 2023-04-01 at 1.25.00 PM.jpeg" loading="lazy" class="image" title="WhatsApp Image 2023-04-01 at 1.25.00 PM" width="273" height="485"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="WhatsApp Image 2023-04-01 at 1.25.01 PM (1).jpeg"><img alt="" src="WhatsApp Image 2023-04-01 at 1.25.01 PM (1).jpeg" loading="lazy" class="image" title="WhatsApp Image 2023-04-01 at 1.25.01 PM (1)" width="273" height="364"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="WhatsApp Image 2023-04-01 at 1.25.01 PM.jpeg"><img alt="" src="WhatsApp Image 2023-04-01 at 1.25.01 PM.jpeg" loading="lazy" class="image" title="WhatsApp Image 2023-04-01 at 1.25.01 PM" width="273" height="364"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="WhatsApp Image 2023-04-01 at 1.25.02 PM (1).jpeg"><img alt="" src="WhatsApp Image 2023-04-01 at 1.25.02 PM (1).jpeg" loading="lazy" class="image" title="WhatsApp Image 2023-04-01 at 1.25.02 PM (1)" width="273" height="485"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="WhatsApp Image 2023-04-01 at 1.25.02 PM.jpeg"><img alt="" src="WhatsApp Image 2023-04-01 at 1.25.02 PM.jpeg" loading="lazy" class="image" title="WhatsApp Image 2023-04-01 at 1.25.02 PM" width="273" height="364"></a>
+                           </figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviews">
+      <div id="reviews">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_reviewsHeading">
+                  <h2 id="reviewsHeading">What do they say about us?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviewsContainer">
+      <div id="reviewsContainer">
+         <div id="wb_reviewsCard1" class="card">
+            <div id="reviewsCard1-card-body">
+               <img id="reviewsCard1-card-item0" src="images/15084862361022978218N E S College Thriprayar logo.jpg" width="287" height="196" alt="" title="">
+               <div id="reviewsCard1-card-item1">NES Collage Nattika</div>
+               <div id="reviewsCard1-card-item2"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item7">"Fastest implimentation and quality products from Alert, They installed the best in class IP cameras in our collage premises we are really happy that we found Alert. </div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard2" class="card">
+            <div id="reviewsCard2-card-body">
+               <img id="reviewsCard2-card-item0" src="toms tvs.jpeg" width="240" height="160" alt="" title="">
+               <div id="reviewsCard2-card-item1">TOMS TVS Nattika</div>
+               <div id="reviewsCard2-card-item2"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item7">"We wre shifted to our new office nattika our old vendor refused reinstallation of our exsisting system,finally we contacted Alert with in no time they came and reinstalled all of our cctv systems i will defenitly recomemnd Alert "They are the solution makers""</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading">
+                  <h2 id="contactHeading">Looking for more help?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_contactText3">
+                     <p style="font-size:27px;line-height:30px;"><span style="font-weight:bold;">Contact Us</span></p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:21px;line-height:24.5px;">&nbsp;Alert</p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">Room no 467/D 1st Floor,</p>
+                     <p style="font-size:13px;line-height:16px;">Pink Tower, Nattika Beach Rd, Nattika</p>
+                     <p style="font-size:13px;line-height:16px;">Thrissur, Kerala 680566</p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">+919037848878</p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">info@alertlooklive.in</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" data-250-start="opacity:1;" data-start="opacity:0;">
+      <div id="wb_up-arrow">
+         <a href="#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text6">
+                  <span style="color:#FFFFFF;">Copyright © alertlooklive.com</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
