@@ -995,7 +995,7 @@ body
    margin-right: -15px;
    margin-left: -15px;
 }
-#contactForm > .row > .col-1, #contactForm > .row > .col-2, #contactForm > .row > .col-3
+#contactForm > .row > .col-1, #contactForm > .row > .col-2, #contactForm > .row > .col-3, #contactForm > .row > .col-4
 {
    box-sizing: border-box;
    font-size: 0;
@@ -1004,7 +1004,7 @@ body
    padding-left: 15px;
    position: relative;
 }
-#contactForm > .row > .col-1, #contactForm > .row > .col-2, #contactForm > .row > .col-3
+#contactForm > .row > .col-1, #contactForm > .row > .col-2, #contactForm > .row > .col-3, #contactForm > .row > .col-4
 {
    float: left;
 }
@@ -1029,7 +1029,7 @@ body
    background-image: none;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
-   width: 33.33333333%;
+   width: 25%;
    text-align: left;
 }
 #contactForm > .row > .col-2 > .col-2-padding
@@ -1039,6 +1039,15 @@ body
    padding: 50px 0 50px 0;
 }
 #contactForm > .row > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 8.33333333%;
+   text-align: right;
+}
+#contactForm > .row > .col-4
 {
    background-color: transparent;
    background-image: none;
@@ -1062,37 +1071,11 @@ body
 }
 @media (max-width: 480px)
 {
-#contactForm > .row > .col-1, #contactForm > .row > .col-2, #contactForm > .row > .col-3
+#contactForm > .row > .col-1, #contactForm > .row > .col-2, #contactForm > .row > .col-3, #contactForm > .row > .col-4
 {
    float: none;
    width: 100% !important;
 }
-}
-#contactForm-divider-top
-{
-   overflow: hidden;
-   position: absolute;
-   top: 0%;
-   width: 100%;
-   height: 25px;
-   line-height: 0;
-   left: 0;
-}
-#contactForm-divider-top svg
-{
-   display: block;
-   width: 200%;
-   height: 100%;
-   position: relative;
-   left: 50%;
-   top: 0;
-   transform: translateX(-50%);
-}
-#contactForm-divider-top .divider-fill
-{
-   fill: #E72613;
-   transform-origin: bottom;
-   transform: rotateY(0deg);
 }
 #wb_contactText3 
 {
@@ -3965,10 +3948,10 @@ width: 100%;   height: 350px;
    border-radius: 0px;
    padding: 0;
    flex-direction: row;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    justify-content: space-around;
    align-items: center;
-   align-content: flex-start;
+   align-content: center;
 }
 #FlexGrid1 .nav
 {
@@ -3979,8 +3962,8 @@ width: 100%;   height: 350px;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
    padding: 0;
-   flex-direction: column;
-   flex-wrap: nowrap;
+   flex-direction: row;
+   flex-wrap: wrap;
    justify-content: flex-start;
    align-items: flex-start;
    align-content: flex-start;
@@ -3994,11 +3977,11 @@ width: 100%;   height: 350px;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
    padding: 0;
-   flex-direction: column;
-   flex-wrap: nowrap;
+   flex-direction: row;
+   flex-wrap: wrap;
    justify-content: flex-start;
    align-items: center;
-   align-content: flex-start;
+   align-content: center;
 }
 #FlexGrid1 .sidebar
 {
@@ -4009,11 +3992,11 @@ width: 100%;   height: 350px;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
    padding: 0;
-   flex-direction: column;
-   flex-wrap: nowrap;
+   flex-direction: row;
+   flex-wrap: wrap;
    justify-content: flex-start;
    align-items: flex-end;
-   align-content: flex-start;
+   align-content: flex-end;
 }
 #FlexGrid1 .footer
 {
@@ -4025,10 +4008,10 @@ width: 100%;   height: 350px;
    border-radius: 0px;
    padding: 0;
    flex-direction: row;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   align-content: flex-start;
+   align-content: center;
 }
 #Label4
 {
@@ -4324,7 +4307,7 @@ width: 100%;   height: 350px;
 #Label4
 {
    display: inline-block;
-   width: 119px;
+   width: 159px;
    line-height: 17px;
    z-index: 54;
 }
@@ -4844,15 +4827,6 @@ body
 {
    margin-right: -15px;
    margin-left: -15px;
-}
-#contactForm-divider-top
-{
-   height: 25px;
-}
-#contactForm-divider-top
-{
-   top: 0%;
-   left: 0;
 }
 #wb_contactText3
 {
