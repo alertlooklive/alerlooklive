@@ -31,13 +31,13 @@
          }
       });
       var Carousel1 = new bootstrap.Carousel('#Carousel1', {interval: 6000, pause: false});
-      var ThemeableMenu1_dropdownToggle = document.querySelectorAll('#ThemeableMenu1 .dropdown-toggle');
-      ThemeableMenu1_dropdownToggle.forEach(item => 
+      var navigationMenu_dropdownToggle = document.querySelectorAll('#navigationMenu .dropdown-toggle');
+      navigationMenu_dropdownToggle.forEach(item => 
       {
          var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
       });
-      var ThemeableMenu1_dropdown = document.querySelectorAll('#ThemeableMenu1 .dropdown');
-      ThemeableMenu1_dropdown.forEach(item => 
+      var navigationMenu_dropdown = document.querySelectorAll('#navigationMenu .dropdown');
+      navigationMenu_dropdown.forEach(item => 
       {
          item.addEventListener('shown.bs.dropdown', function(e)
          {
@@ -144,41 +144,38 @@
          </div>
       </div>
    </div>
-   <div id="wb_navigation">
-      <div id="navigation">
+   <div id="wb_LayoutGrid3">
+      <div id="LayoutGrid3">
          <div class="row">
             <div class="col-1">
-               <div id="wb_Image1">
-                  <img src="images/logo_alert_ed-removebg-preview.png" id="Image1" alt="" width="242" height="122">
+               <div id="wb_Image8">
+                  <img src="images/logo_alert_ed-removebg-preview.png" id="Image8" alt="" width="146" height="74">
                </div>
             </div>
             <div class="col-2">
-            </div>
-            <div class="col-3">
-               <nav id="wb_ThemeableMenu1">
-                  <div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+               <nav id="wb_navigationMenu">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
                      <div class="container">
-                        <a id="ThemeableMenu1-logo" href="#"><img alt="" title="" src="images/logo32.jpg"></a>
                         <div class="navbar-header">
-                           <button title="" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".ThemeableMenu1-navbar-collapse">
+                           <button title="" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navigationMenu-navbar-collapse">
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                            </button>
                         </div>
-                        <div class="ThemeableMenu1-navbar-collapse collapse">
+                        <div class="navigationMenu-navbar-collapse collapse">
                            <ul class="nav navbar-nav">
                               <li class="nav-item">
-                                 <a href="#welcome" class="nav-link">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a href="#planTripHeading" class="nav-link">About</a>
+                                 <a href="#wb_Carousel1" class="nav-link">Home</a>
                               </li>
                               <li class="nav-item">
                                  <a href="#wb_LayoutGrid2" class="nav-link">Services</a>
                               </li>
                               <li class="nav-item">
-                                 <a href="#wb_contact" class="nav-link">Contact</a>
+                                 <a href="#wb_planTrip" class="nav-link">About us</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#wb_contactForm" class="nav-link">Contact</a>
                               </li>
                            </ul>
                         </div>
@@ -481,23 +478,33 @@
          <div class="row">
             <div class="col-1">
                <div class="col-1-padding">
+                  <div id="wb_Icon1">
+                     <a href="#"><div id="Icon1"><i class="fa fa-phone"></i></div></a>
+                  </div>
+                  <label for="" id="Label3">+919037848878</label>
                </div>
             </div>
             <div class="col-2">
                <div class="col-2-padding">
-                  <div id="wb_contactText3">
-                     <p style="font-size:27px;line-height:30px;"><span style="font-weight:bold;">Contact Us</span></p>
-                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                     <p style="font-size:21px;line-height:24.5px;">&nbsp;Alert</p>
-                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                     <p style="font-size:13px;line-height:16px;">Room no 467/D 1st Floor,</p>
-                     <p style="font-size:13px;line-height:16px;">Pink Tower, Nattika Beach Rd, Nattika</p>
-                     <p style="font-size:13px;line-height:16px;">Thrissur, Kerala 680566</p>
-                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                     <p style="font-size:13px;line-height:16px;">+919037848878</p>
-                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
-                     <p style="font-size:13px;line-height:16px;">info@alertlooklive.in</p>
+                  <div id="wb_Icon2">
+                     <a href="#"><div id="Icon2"><i class="fa fa-envelope-o"></i></div></a>
                   </div>
+                  <label for="" id="Label4">info@alertlooklive.in</label>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_contactText3">
+                  <p style="font-size:27px;line-height:30px;"><span style="font-weight:bold;">Contact Us</span></p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:21px;line-height:24.5px;">&nbsp;Alert</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">Room no 467/D 1st Floor,</p>
+                  <p style="font-size:13px;line-height:16px;">Pink Tower, Nattika Beach Rd, Nattika</p>
+                  <p style="font-size:13px;line-height:16px;">Thrissur, Kerala 680566</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
                </div>
             </div>
          </div>
@@ -512,10 +519,22 @@
          <div class="row">
             <div class="col-1">
                <div id="wb_Text6">
-                  <span style="color:#FFFFFF;">Copyright © alertlooklive.com</span>
+                  <span style="color:#FFFFFF;">Copyright © alertlooklive.in</span>
                </div>
             </div>
          </div>
+      </div>
+   </div>
+   <div id="FlexGrid1">
+      <div class="header">
+      </div>
+      <div class="nav">
+      </div>
+      <div class="main">
+      </div>
+      <div class="sidebar">
+      </div>
+      <div class="footer">
       </div>
    </div>
 </body>
